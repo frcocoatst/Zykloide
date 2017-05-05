@@ -694,11 +694,17 @@
                                 <rect key="frame" x="79" y="41" width="206" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="932-VP-ehk"/>
+                                <connections>
+                                    <action selector="SliderR_Action:" target="XfG-lQ-9wD" id="f1e-Jm-hmU"/>
+                                </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eBT-GC-CVC">
                                 <rect key="frame" x="79" y="18" width="206" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="tit-yH-WyA"/>
+                                <connections>
+                                    <action selector="Slider_r_Action:" target="XfG-lQ-9wD" id="jX9-WA-xX0"/>
+                                </connections>
                             </slider>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bw-eY-iDo">
                                 <rect key="frame" x="18" y="42" width="57" height="17"/>
@@ -720,6 +726,11 @@
                             </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="myViewOutlet" destination="mhV-Hk-exG" id="9MG-FH-wTp"/>
+                        <outlet property="valueROutlet" destination="dNI-5r-iza" id="N1L-uF-LoJ"/>
+                        <outlet property="valuerOutlet" destination="eBT-GC-CVC" id="xE8-rX-h77"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,24 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var myViewOutlet: MyView!
+    
+    @IBOutlet weak var valueROutlet: NSSlider!
+    
+    @IBOutlet weak var valuerOutlet: NSSlider!
+    
+    @IBAction func SliderR_Action(_ sender: Any) {
+        
+        let RFloat:Float = valueROutlet.floatValue/1.0
+        myViewOutlet.valueSetR(RFloat)
+    }
+    
+    @IBAction func Slider_r_Action(_ sender: Any) {
+        
+        let rFloat:Float = valuerOutlet.floatValue/10.0
+        myViewOutlet.valueSetr(rFloat)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

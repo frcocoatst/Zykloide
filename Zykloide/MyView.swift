@@ -13,15 +13,29 @@ class MyView: NSView {
     var mycurve = NSBezierPath()
     var myRect = NSRect()
     var centerPoint = NSPoint()
+    var Radius_R:CGFloat = 100
+    var Radius_r:CGFloat = 10
     
     var a = NSPoint()
     var b = NSPoint()
+    
+    func valueSetR(_ value:Float) {
+        Radius_R = 5 + CGFloat(value)
+        NSLog("Radius_R=%f",Radius_R)
+        // force a redraw
+        needsDisplay = true
+    }
+
+    func valueSetr(_ value:Float) {
+        Radius_r = 5 + CGFloat(value)
+        NSLog("Radius_r=%f",Radius_r)
+        // force a redraw
+        needsDisplay = true
+    }
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        var Radius_R:CGFloat = 100
-        var Radius_r:CGFloat = 10
         var Sum_R:CGFloat = 10
         var Rel_R:CGFloat = 10
 
@@ -33,12 +47,6 @@ class MyView: NSView {
         
         centerPoint.x = (self.bounds.origin.x + self.bounds.size.width)/2.0
         centerPoint.y = (self.bounds.origin.y + self.bounds.size.height)/2.0
-        
-        //Radius_R = [myRadiusROutlet floatValue];
-        // [myDispRadiusROutlet setFloatValue:Radius_R];
-        
-        // Radius_r = [myRadiusrOutlet floatValue];
-        // [myDispRadiusrOutlet setFloatValue:Radius_r];
         
         // Calculate what can be calculated out of the for-loop
         Sum_R = Radius_R + Radius_r
@@ -66,13 +74,4 @@ class MyView: NSView {
             b = a
         }
     }
-    
-    /*
-     
-     needsDisplay = true
-
-     
-     */
-    
-    
 }
