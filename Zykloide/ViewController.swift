@@ -31,7 +31,9 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // additional setup after loading the view  set Values
+        myViewOutlet.valueSetR(50.0)
+        myViewOutlet.valueSetr(50.0)
     }
 
     override var representedObject: Any? {
