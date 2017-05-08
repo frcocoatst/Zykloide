@@ -20,14 +20,14 @@ class MyView: NSView {
     var b = NSPoint()
     
     func valueSetR(_ value:Float) {
-        Radius_R = 5 + CGFloat(value)
+        Radius_R = CGFloat(value) + 5.0
         NSLog("Radius_R=%f",Radius_R)
         // force a redraw
         needsDisplay = true
     }
 
     func valueSetr(_ value:Float) {
-        Radius_r = 5 + CGFloat(value)
+        Radius_r = CGFloat(value) + 5.0
         NSLog("Radius_r=%f",Radius_r)
         // force a redraw
         needsDisplay = true

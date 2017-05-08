@@ -40,6 +40,8 @@ class ViewController: NSViewController {
         // additional setup after loading the view  set Values
         myViewOutlet.valueSetR(50.0)
         myViewOutlet.valueSetr(50.0)
+        valueRvalue.stringValue = "50.00"
+        valuervalue.stringValue = "5.00"
     }
 
     override var representedObject: Any? {
