@@ -16,16 +16,22 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var valuerOutlet: NSSlider!
     
+    @IBOutlet weak var valueRvalue: NSTextField!
+    
+    @IBOutlet weak var valuervalue: NSTextField!
+    
     @IBAction func SliderR_Action(_ sender: Any) {
         
         let RFloat:Float = valueROutlet.floatValue/1.0
         myViewOutlet.valueSetR(RFloat)
+        valueRvalue.stringValue = String(format: "%3.2f",RFloat)
     }
     
     @IBAction func Slider_r_Action(_ sender: Any) {
         
         let rFloat:Float = valuerOutlet.floatValue/10.0
         myViewOutlet.valueSetr(rFloat)
+        valuervalue.stringValue = String(format: "%3.2f",rFloat)
     }
     
     override func viewDidLoad() {
